@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
-import MyProfilePic from "./components/MyProfilePic";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,8 +19,9 @@ export default function RootLayout({
     <html lang="en">
       <body className="dark:bg-slate-800 text-white">
         <Navbar />
-        <MyProfilePic />
-        {children}
+        <main className="flex min-h-screen flex-col items-center p-24">
+          {children}
+        </main>
       </body>
     </html>
   );
